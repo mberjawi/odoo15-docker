@@ -1,4 +1,4 @@
-# Quick install
+# Quick install - Installing Odoo 15 with one command (Supports multiple Odoo instances on one server) .
 
 Installing Odoo 15 with one command.
 
@@ -7,18 +7,18 @@ Installing Odoo 15 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-15-docker-compose/master/run.sh | sudo bash -s odoo-one 10015 20015
+curl -s https://raw.githubusercontent.com/mberjawi/odoo15-docker/master/run.sh | sudo bash -s odoo-one 10015 20015
 ```
 
-to set up first Odoo instance @ `localhost:10015` (default master password: `minhng.info`)
+to set up first Odoo instance @ `localhost:10015` (default master password: `marwanberjawi.com`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/minhng92/odoo-15-docker-compose/master/run.sh | sudo bash -s odoo-two 11015 21015
+curl -s https://raw.githubusercontent.com/mberjawi/odoo15-docker/master/run.sh | sudo bash -s odoo-two 11015 21015
 ```
 
-to set up another Odoo instance @ `localhost:11015` (default master password: `minhng.info`)
+to set up another Odoo instance @ `localhost:11015` (default master password: `marwanberjawi.com`)
 
 Some arguments:
 * First argument (**odoo-one**): Odoo deploy folder
@@ -56,7 +56,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/minhng92/odoo-15-docker-compose
+$ git clone https://github.com/mberjawi/odoo15-docker
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
@@ -78,7 +78,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `minhng.info`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `marwanberjawi.com`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
